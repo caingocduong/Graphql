@@ -1,0 +1,49 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type NewProduct{
+    id : ID
+    img : String!
+    title : String!
+    description : String!
+    discount : Int!
+    originalPrice : Float!
+    price : Float!
+}
+input NewProductInput{
+    img : String
+    title : String
+    description : String
+    discount : Int
+    originalPrice : Float
+    price : Float
+}
+
+input NewProductFilter{
+    title_contains : String
+}
+
+type Query{
+    allNewProducts : [NewProduct]
+    allNewProductsFilterByTitle (filter : NewProductFilter) : [NewProduct]
+    allNewProductsPagination (
+        filter : NewProductFilter,
+        pageIndex : Int = 0,
+        pageSize : Int = 0) : [NewProduct]
+    findNewProductById (id : ID!): NewProduct
+}
+
+type Mutation{
+    createNewProduct (
+        img : String!,
+        title : String!,
+        description : String!,
+        discount : Int,
+        originalPrice : Float,
+        price : Float!
+    ) : NewProduct
+    updateNewProduct (id : ID!,newProductInput : NewProductInput) : NewProduct
+    deleteNewProduct (id : ID!) : NewProduct
+}
