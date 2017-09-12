@@ -1,0 +1,81 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Maven
+log/
+target/
+=======
+# IDEA
+
+/.idea
+.idea_modules/
+*.iml
+/lib
+
+# OSX
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+
+ehthumbs.db
+Thumbs.db
+
+# Build directories
+
+**/target
+target
+out/
+overlays/
+/data/
+/statics/themes/themes/default/css/
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle
+.gradle
+out
+build
+generated
+
+# ??
+*.log
+>>>>>>> 13b11ce7e987e6342876ef1324c3e79bc1ed80f9
+=======
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/# BootTemplate
+>>>>>>> f71a37865d2132782968e70e0482d8d633a59cf5
